@@ -19,9 +19,7 @@ wandb
 **.e
 **.o
 **.sbatch
-*.png
 *.pt
-*.gif
 **data
 **dataset
 **slurm**

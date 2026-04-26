@@ -2,11 +2,13 @@
 
 Official code release for **MacroNav: Multi-Task Context Representation Learning Enables Efficient Navigation in Unknown Environments**.
 
-MacroNav is a learning-based navigation framework for unknown environments. It first trains a lightweight context encoder with multi-task self-supervised learning, then integrates the learned dense contextual representation with graph-based reasoning in an RL navigation policy.
+MacroNav is a learning-based navigation framework for unknown environments. It first trains a lightweight context encoder with multi-task self-supervised learning, then integrates the learned dense contextual representation with an RL navigation policy.
 
 <div align="center">
-  <img src="docs/arch.png" alt="MacroNav architecture" width="700" />
+  <img src="docs/arch.jpg" alt="MacroNav architecture" width="600" />
 </div>
+
+Demo video: [Bilibili](https://www.bilibili.com/video/BV175ofBTEpa/?share_source=copy_web&vd_source=31621f5011869655cf889054f5c4772c)
 
 ## Repository Structure
 
@@ -39,10 +41,9 @@ pip install -e .
 
 ## Dataset Preparation
 
-Download zip from: https://drive.google.com/file/d/1rEuVVzqzfjmvBkcMqM5Q4J7td7pToTW8/view?usp=sharing
+Download zip from [GoogleDrive](https://drive.google.com/file/d/1rEuVVzqzfjmvBkcMqM5Q4J7td7pToTW8/view?usp=sharing)
 
 ```bash
-# Encoder pre-training dataset
 unzip macronav_dataset_and_ckpt.zip
 ```
 
@@ -82,7 +83,7 @@ Configure the target experiment in `macronav/nav_policy/config/valid_param.py`.
 python macronav/nav_policy/valid_nav.py
 ```
 
-## Interactive Demo
+### Interactive Demo
 
 `valid_iter.py` provides an OpenCV-based interactive demo. It can run out of the box with the released maps and policy checkpoints after extraction.
 
@@ -122,15 +123,10 @@ Controls:
 - `r`: reset
 - `Esc`: exit
 
-
-<!--
-Demo GIF placeholders. Replace these paths after adding GIFs.
-
 <div align="center">
-  <img src="docs/demo_easy.gif" alt="MacroNav interactive demo on easy map" width="45%" />
-  <img src="docs/demo_real.gif" alt="MacroNav interactive demo on real map" width="45%" />
+  <img src="docs/iter_demo_1.gif" alt="1" width="300" />
+  <img src="docs/iter_demo_2.gif" alt="2" width="300" />
 </div>
--->
 
 ## Model Export
 
@@ -166,4 +162,3 @@ This codebase builds on ideas and components from the following open-source repo
 ## License
 
 This project is released under the MIT License. See [LICENSE](LICENSE) for details.
-# MacroNav
