@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "macronav"
+version = "0.1.0"
+description = "RL navigation with self-supervised contextual encoding."
+authors = [{ name = "Simon", email = "kenneth_simon@outlook.com" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+	"ipdb==0.13.13",
+	"lz4==4.4.5",
+	"matplotlib==3.10.8",
+	"numba==0.65.0",
+	"numpy==1.26.4",
+	"opencv-python-headless==4.7.0.72",
+	"ray==2.55.0",
+	"requests==2.33.1",
+	"scikit-image==0.25.2",
+	"scikit-learn==1.7.2",
+	"scipy==1.15.3",
+	"six==1.17.0",
+	"tensorboard==2.20.0",
+	"termcolor==3.3.0",
+	"timm==1.0.15",
+	"torch>=2.8",
+	"torchsummary==1.5.1",
+	"torchvision",
+	"tqdm==4.67.3",
+	"wandb==0.26.0",
+	"yacs==0.1.8",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "black"]
+
+[project.scripts]
+# my-cli = "macronav.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nav_policy*", "pretrain*","macronav*"]
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
