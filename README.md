@@ -148,10 +148,7 @@ For TensorRT export, install the matching CUDA/PyTorch/TensorRT packages for you
   title={MacroNav: Multi-Task Context Representation Learning Enables Efficient Navigation in Unknown Environments},
   author={Sima, Kuankuan and Tang, Longbin and Yang, Zhenyu and Ma, Haozhe and Zhao, Lin},
   journal={IEEE Robotics and Automation Letters},
-  year={2026},
-  volume={11},
-  number={6},
-  pages={7636-7643}
+  year={2026}
 }
 ```
 
